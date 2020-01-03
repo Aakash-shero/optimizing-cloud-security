@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BE PROJECT</title>
+        <!-- Load Roboto font -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!-- Load css styles -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/pluton.css" />
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+        
+        <style>span{color:rgb(0, 47, 255);}</style>
+        <!--My Script-->
+        <script type="text/javascript">
+			function validate()
+			{
+				var name = document.registeration.username;
+				var password = document.registeration.password1;
+				var confirmPassword = document.registeration.password2;
+				var mail = document.registeration.email;
+				var number = document.registeration.contact;
+				
+				if(name.value.length < 5 || !name.value.match(/^[a-zA-Z0-9 ]+$/))
+				{
+					alert( "USERNAME must be 5+ alphanumeric letters!\nNot a valid usrename!" );
+					name.focus() ;
+					return false;	
+				}
+				if(password.value.length < 6 )
+				{
+					alert( "Password must be 5+ alphanumeric letters!\nNot a valid password!" );
+					password.focus() ;
+					return false;	
+				}
+				if(confirmPassword.value != password.value )
+				{
+					alert( "Password mismatch!" );
+					confirmPassword.focus() ;
+					return false;	
+				}
+				if( !mail.value.match(/([\w\-]+\@[\w\-]+\.[\w\-]+)/) )
+				{
+					alert( "Not a valid emailID!" );
+					mail.focus() ;
+					return false;	
+				}
+				if(number.value.length < 10 )
+				{
+					alert( "Not a valid Contact Number!" );
+					number.focus() ;
+					return false;	
+				}
+				return(true);
+			}
+            function numberOnly()
+            {
+                if(event.keyCode < 48 || event.keyCode > 57)
+                    event.returnValue = false;	
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <mainHeading style="color:#F00; font-size:40px; font-weight:bold;">
+                    	<br />
+                    	<center>Searching and Indexing over Encrypted Data on Cloud</center>
+                        <br />
+                    </mainHeading>
+                    <!-- Navigation button, visible on small resolution -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="icon-menu"></i>
+                    </button>
+                    <!-- Main navigation -->
+                    <div class="nav-collapse collapse pull-right">
+                        <ul class="nav" id="top-navigation">
+                            <li class="active"><a href="#home">Home</a></li>
+                            
+                            
+                            <li><a href="#login">Login</a></li>
+                            <li><a href="#register">Register</a></li>
+                            
+                        </ul>
+                    </div>
+                    <!-- End main navigation -->
+                </div>
+            </div>
+        </div>
+        <!-- Start home section -->
+        <div id="home">
+            <!-- Start cSlider -->
+            <div id="da-slider" class="da-slider">
+                <div class="triangle"></div>
+                <!-- mask elemet use for masking background image -->
+                <div class="mask"></div>
+                <!-- All slides centred in container element -->
+                <div class="container">
+                    <!-- Start first slide -->
+                    <div class="da-slide">
+                        <h2 class="fittext2">OPTIMIZING CLOUD SECURITY </h2>
+                        
+                        <p>We present a scheme that discusses keyword search over an encrypted cloud data. The data that has to be outsourced is encrypted using symmetric encryption algorithm for data confidentiality.</p>
+                        <div class="da-img">
+                            <img src="images/Slider01.png" alt="image01" width="320">
+                        </div>
+                    </div>
+                    <!-- End first slide -->
+                    
+                    <!-- Start cSlide navigation arrows -->
+                    <div class="da-arrows">
+                        <span class="da-arrows-prev"></span>
+                        <span class="da-arrows-next"></span>
+                    </div>
+                    <!-- End cSlide navigation arrows -->
+                </div>
+            </div>
+        </div>
+        <!-- End home section -->
+        <!-- Service section start -->
+        <div class="section primary-section" id="service">
+            <div class="container">
+                <!-- Start title section -->
+                <div class="title">
+                    <h1>This project works on</h1>
+                    <!-- Section's title goes here -->
+                    <p>The system encrypt the data before outsourcing it and then decrypt it before giving it back to you.</p>
+                    <!--Simple description for section goes here. -->
+                </div>
+                <div class="row-fluid">
+                    <div class="span15">
+                        <div class="centered service">
+                            <div class="circle-border zoom-in">
+                                <img class="img-circle" src="images/images.jpg" alt="service 1">
+                            </div>
+                            <h3>Encrypt Text Files</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Service section end -->
+        <!-- Portfolio section start -->
+        
+        <!-- Portfolio section end -->
+        <!-- About us section start -->
+        <div class="section secondary-section" id="about">
+            <div class="triangle"></div>
+            <div class="container">
+                <div class="title">
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+        <!-- About us section end -->
+        
+        <!-- Login section start -->
+        <div id="login">
+            <div class="section primary-section">
+                <div class="triangle">
+                </div>
+                <div class="container">
+                    <div class="title">
+                        <h1>Login</h1>
+                    </div>
+                    
+                    	<div class="price-table row-fluid">
+                        	<div class="span4 price-column">
+                            	<img src="images/login2.gif" />  
+                            </div>
+                            <div class="span4 price-column">
+                                    <h3>Login</h3>
+                                    <form  name="registeration" name="registeration" method="POST" action="login.php" onSubmit="return(validate());">
+                                        <ul class="list">
+                                            <li>
+                     <strong>Username*</strong><input type="text" name="username" onkeyup="showHintUsername(this.value)" required />
+                                            	<br /><span id="usernameHint"></span>	
+                                            </li>
+            								<li>
+            		<strong>Password*</strong><input type="password" name="password" onkeyup="showHintPassword(this.value)" required />
+                                                <br /><span id="passwordHint"></span>
+                                            </li>
+                                        </ul>
+                                        <div class="button button-ps">
+                                            <input type="submit" name="submit" value="Login">
+                                        </div>
+                                    </form>
+                            </div>
+                            <div class="span4 price-column">
+                            	<img src="images/login1.jpg" />        
+                            </div>
+                        </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Registeration section start -->
+        <div id="register" class="section secondary-section">
+           	<div class="triangle">
+                </div>
+            <div class="container">
+                <div class="title">
+                    <h1>Register</h1>
+                    <p>Please get yourself registered to enjoy our services.</p>
+                </div>
+                <div class="price-table row-fluid">
+                    <div class="span4 price-column">
+                    	<img src="images/register2.jpg" />    
+                    </div>
+                    <div class="span4 price-column">
+                        <h3>Register</h3>
+                        <form  name="registeration" name="registeration" method="POST" action="register.php" onSubmit="return(validate());">
+                            <ul class="list">
+                                <li>
+                             <strong>Username*</strong><input type="text" name="username" onkeyup="showHintName(this.value)" required />
+                                    <br /><span id="nameHint"></span>
+                                </li>
+                                <li><strong>Password*</strong><input type="password" name="password1" required /></li>
+                                <li><strong>Retype Password*</strong><input type="password" name="password2" required /></li>
+                                <li>
+                           	<strong>Email ID*</strong><input type="email" name="email" onkeyup="showHintMail(this.value)" required />
+                            		<br /><span id="emailHint"></span>
+                           		</li>
+                            	<li>
+<strong>Contact No.*</strong><input type="tel" name="contact" onkeyup="showHintContact(this.value)" onkeypress="numberOnly()" required/>
+									<br /><span id="contactHint"></span>
+                                </li>
+                            </ul>
+                            <div class="button button-ps">
+                            	<input type="submit" name="submit" value="Register">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="span4 price-column">
+                    	<img src="images/register.jpg" />    
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+        <!-- Price section end -->
+               <!-- Footer section start -->
+        <div class="footer">
+            <p>&copy; 2019 All Rights Reserved</p>
+        </div>
+        <!-- Footer section end -->
+        <!-- ScrollUp button start -->
+        <div class="scrollup">
+            <a href="#">
+                <i class="icon-up-open"></i>
+            </a>
+        </div>
+        <!-- ScrollUp button end -->
+        <!-- Include javascript -->
+        <script type="text/javascript" src="ajax.js"></script>
+		
+		<script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="js/jquery.cslider.js"></script>
+        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="js/jquery.inview.js"></script>
+        <!-- Load google maps api and call initializeMap function defined in app.js -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=initializeMap"></script>
+        <!-- css3-mediaqueries.js for IE8 or older -->
+        <!--[if lt IE 9]>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
