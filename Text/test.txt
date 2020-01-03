@@ -1,0 +1,38 @@
+The security community’s perception of the “oblivious”
+user evolved from the results of a number of laboratory
+studies on browser security indicators [5, 11, 13, 15, 26,
+30, 34]. However, these studies are not necessarily representative
+of the current state of browser warnings in
+2013. Most of the studies evaluated warnings that have
+since been deprecated or significantly modified, often in
+response to criticisms in the aforementioned studies. Our
+goal is to investigate whether modern browser security
+warnings protect users in practice.
+We performed a large-scale field study of user decisions
+after seeing browser security warnings. Our study
+encompassed 25,405,944 warning impressions in Google
+Chrome and Mozilla Firefox in May and June 2013. We
+collected the data using the browsers’ telemetry frameworks,
+which are a mechanism for browser vendors to
+collect pseudonymous data from end users. Telemetry
+allowed us to unobtrusively measure user behavior during
+normal browsing activities. This design provides realism:
+our data reflects users’ actual behavior when presented
+with security warnings.
+In this paper, we present the rates at which users click
+through (i.e., bypass) malware, phishing, and SSL warnings.
+Low clickthrough rates are desirable because they
+indicate that users notice and heed the warnings. Clickthrough
+rates for the two browsers’ malware and phishing
+warnings ranged from 9% to 23%, and users clicked
+through 33.0% of Mozilla Firefox’s SSL warnings. This
+demonstrates that browser security warnings can effectively
+protect most users in practice.
+Unfortunately, users clicked through Google Chrome’s
+SSL warning 70.2% of the time. This implies that the
+user experience of a warning can have a significant impact
+on user behavior. We discuss several factors that might
+contribute to this warning’s higher clickthrough rates. Our
+positive findings for the other five warnings suggest that
+the clickthrough rate for Google Chrome’s SSL warning
+can be improved.
